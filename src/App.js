@@ -15,9 +15,9 @@ function App() {
       <div>
         <BrowserRouter>
           <div >
-          <Link style = {linkStyle}  to = "/unread" >unread</Link>
-                <Link style = {linkStyle}  to = "/read" >read</Link>
-                <Link style = {linkStyle}  to = "/fevorits" >fevorits</Link>
+          <Link style = {linkStyle}  to = "/unread" >UNREAD</Link>
+                <Link style = {linkStyle}  to = "/read" >READ</Link>
+                <Link style = {linkStyle}  to = "/fevorits" >FEVORITS</Link>
 
           </div>
 

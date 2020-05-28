@@ -1,0 +1,58 @@
+
+.listofmail-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+}
+.userName-info {
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.mail-desc {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 16px;
+    flex-direction: column;
+}
+.userName-info span {
+    width: 45px;
+    height: 45px;
+    background-color: #EF4065;
+    color: #FFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.mail-sub-descr p {
+    font-size: 14px;
+    color: #7b7272;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+.mail-desc div {
+    margin-bottom: 5px;
+}
+.mail-desc span {
+    color: #7b7272;
+}
+.mail-desc label {
+    color: #7d7979;
+     font-weight: bold
+}
+.mail-from {
+    font-size: 15px;
+    color: #605b5b;
+    margin-bottom: 5px;
+}
+.mail-sub-descr {
+    margin-top: 8px;
+}

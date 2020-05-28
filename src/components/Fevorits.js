@@ -1,4 +1,5 @@
 import React from 'react';
+import EmailStyle from './EmaailStyle';
 
 class Fevorits extends React.Component {
     constructor(){
@@ -16,12 +17,16 @@ class Fevorits extends React.Component {
                     this.state.emails.map(email => {
                         return (
                             <div>
-                                {email.favorit && <div style = {{margin : "10px", border : "1px solid black"}}>
-                                <h3>From : {email.from.name}</h3>
-                                <h3>Subject : {email.subject}</h3>
-                                <h4>{email.short_description}</h4>
-                                <h4>{email.date}</h4>
-                            </div>}
+                                {email.favorit && 
+                            //     <div style = {{margin : "10px", border : "1px solid black"}}>
+                            //     <h3>From : {email.from.name}</h3>
+                            //     <h3>Subject : {email.subject}</h3>
+                            //     <h4>{email.short_description}</h4>
+                            //     <h4>{email.date}</h4>
+                            // </div>
+                                    <EmailStyle email = {email} />
+
+                            }
                             </div>
                         )
                     })

@@ -1,5 +1,7 @@
 import React from 'react';
-import Axios from 'axios';
+import axios from 'axios';
+import "./style.css"
+import EmailStyle from './EmaailStyle';
 
 class Unread extends React.Component{
     constructor(){
@@ -10,7 +12,7 @@ class Unread extends React.Component{
     }
 
     componentDidMount = () => {
-        Axios.get("https://flipkart-email-mock.now.sh/")
+        axios.get("https://flipkart-email-mock.now.sh/")
             .then(response => {
                 const emails = response.data.list
                 this.setState({emails})
@@ -42,12 +44,14 @@ class Unread extends React.Component{
                 {
                     this.state.emails.map(email => {
                         return (
-                            <div style = {{margin : "10px", border : "1px solid black"}} onClick = {() => this.handleEmailClick(email.id)} >
-                                <h3>From : {email.from.name}</h3>
-                                <h3>Subject : {email.subject}</h3>
-                                <h4>{email.short_description}</h4>
-                                <h4>{email.date}</h4>
-                            </div>
+                            // <div style = {{margin : "10px", border : "1px solid black"}} onClick = {() => this.handleEmailClick(email.id)} >
+                            //     <h3>From : {email.from.name}</h3>
+                            //     <h3>Subject : {email.subject}</h3>
+                            //     <h4>{email.short_description}</h4>
+                            //     <h4>{email.date}</h4>
+                            // </div>
+
+                            <EmailStyle email = {email} handleEmailClick = {this.handleEmailClick} />
                         )
                     })
                 }
