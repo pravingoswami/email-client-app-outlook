@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Link } from "react-router-dom"
+import Read from './components/Read';
+import Unread from './components/Unread';
+import Fevorits from './components/Fevorits';
 
 function App() {
+
+
+  const linkStyle = {
+    margin : "10px"
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <BrowserRouter>
+          <div >
+          <Link style = {linkStyle}  to = "/unread" >unread</Link>
+                <Link style = {linkStyle}  to = "/read" >read</Link>
+                <Link style = {linkStyle}  to = "/fevorits" >fevorits</Link>
+
+          </div>
+
+          <Route path = "/read" component = {Read} exact = {true} />
+          <Route path = "/unread" component = {Unread} exact = {true} />
+          <Route path = "/fevorits" component = {Fevorits} exact = {true} />
+
+
+
+        </BrowserRouter>
+
+
+      </div>
   );
 }
 
